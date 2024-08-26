@@ -26,39 +26,70 @@ namespace AuditSystem.Context
         }
     
         public DbSet<C__EFMigrationsHistory> C__EFMigrationsHistory { get; set; }
+        public DbSet<TblAccount> TblAccounts { get; set; }
+        public DbSet<TblChequeDetail> TblChequeDetails { get; set; }
+        public DbSet<TblChequeTempDetail> TblChequeTempDetails { get; set; }
+        public DbSet<TblCompany> TblCompanies { get; set; }
+        public DbSet<TblCustomerGroup> TblCustomerGroups { get; set; }
         public DbSet<TblCustomer> TblCustomers { get; set; }
         public DbSet<TblDepartment> TblDepartments { get; set; }
+        public DbSet<TblDepartmentSecond> TblDepartmentSeconds { get; set; }
+        public DbSet<TblDepartmentThird> TblDepartmentThirds { get; set; }
         public DbSet<TblDesignation> TblDesignations { get; set; }
+        public DbSet<TblDocument> TblDocuments { get; set; }
         public DbSet<TblEmployee> TblEmployees { get; set; }
         public DbSet<TblEmployeeHourlyRate> TblEmployeeHourlyRates { get; set; }
+        public DbSet<TblGenaralReceipt> TblGenaralReceipts { get; set; }
         public DbSet<TblGradeMaster> TblGradeMasters { get; set; }
         public DbSet<TblInternationalReferalMaster> TblInternationalReferalMasters { get; set; }
         public DbSet<TblIntroductionMaster> TblIntroductionMasters { get; set; }
+        public DbSet<TblInvoiceBody> TblInvoiceBodies { get; set; }
+        public DbSet<TblInvoiceBodyTemp> TblInvoiceBodyTemps { get; set; }
+        public DbSet<TblInvoiceHead> TblInvoiceHeads { get; set; }
         public DbSet<TblInvoiceNarrationMaster> TblInvoiceNarrationMasters { get; set; }
         public DbSet<TblInvoiceShortNarrationMaster> TblInvoiceShortNarrationMasters { get; set; }
-        public DbSet<TblJob> TblJobs { get; set; }
+        public DbSet<TblJobMaster> TblJobMasters { get; set; }
+        public DbSet<TblJobMasterAssignTemp> TblJobMasterAssignTemps { get; set; }
+        public DbSet<TblJobMasterLocation> TblJobMasterLocations { get; set; }
+        public DbSet<TblJobMasterLocationTemp> TblJobMasterLocationTemps { get; set; }
+        public DbSet<TblJobMasterPartner> TblJobMasterPartners { get; set; }
+        public DbSet<TblJobTransaction> TblJobTransactions { get; set; }
         public DbSet<TblLegalStatusMaster> TblLegalStatusMasters { get; set; }
         public DbSet<TblLocation> TblLocations { get; set; }
-        public DbSet<TblManager> TblManagers { get; set; }
         public DbSet<TblNatureMaster> TblNatureMasters { get; set; }
         public DbSet<TblNonEffectiveEmployee> TblNonEffectiveEmployees { get; set; }
         public DbSet<TblOpeningBalance> TblOpeningBalances { get; set; }
-        public DbSet<TblPartner> TblPartners { get; set; }
+        public DbSet<TblProformaInvoiceBody> TblProformaInvoiceBodies { get; set; }
+        public DbSet<TblProformaInvoiceBodyTemp> TblProformaInvoiceBodyTemps { get; set; }
+        public DbSet<TblProformaInvoiceHead> TblProformaInvoiceHeads { get; set; }
+        public DbSet<TblReceipt> TblReceipts { get; set; }
+        public DbSet<TblReceiptBodydeatil> TblReceiptBodydeatils { get; set; }
+        public DbSet<TblReceiptTempInvoice> TblReceiptTempInvoices { get; set; }
         public DbSet<TblSectorMaster> TblSectorMasters { get; set; }
         public DbSet<TblSiteSetting> TblSiteSettings { get; set; }
         public DbSet<TblTitle> TblTitles { get; set; }
         public DbSet<TblWorkGroup> TblWorkGroups { get; set; }
         public DbSet<TblWorkType> TblWorkTypes { get; set; }
+        public DbSet<VW_CurrentlyGetJobAssignee> VW_CurrentlyGetJobAssignee { get; set; }
         public DbSet<VW_Customer> VW_Customer { get; set; }
         public DbSet<VW_Employee> VW_Employee { get; set; }
+        public DbSet<VW_EmployeeJobTransaction> VW_EmployeeJobTransaction { get; set; }
+        public DbSet<VW_GeneralReceipts> VW_GeneralReceipts { get; set; }
+        public DbSet<VW_GetJObActualValue> VW_GetJObActualValue { get; set; }
         public DbSet<VW_GradeMaster> VW_GradeMaster { get; set; }
         public DbSet<VW_InternationalReferalMaster> VW_InternationalReferalMaster { get; set; }
         public DbSet<VW_IntroductionMaster> VW_IntroductionMaster { get; set; }
+        public DbSet<VW_InvoiceHead> VW_InvoiceHead { get; set; }
         public DbSet<VW_InvoiceNarrationMaster> VW_InvoiceNarrationMaster { get; set; }
         public DbSet<VW_InvoiceShortNarrationMaster> VW_InvoiceShortNarrationMaster { get; set; }
+        public DbSet<VW_JobMaster> VW_JobMaster { get; set; }
+        public DbSet<VW_JobMasterViewforCalculatorJobCostReport> VW_JobMasterViewforCalculatorJobCostReport { get; set; }
+        public DbSet<VW_JobMasterViewforReport> VW_JobMasterViewforReport { get; set; }
         public DbSet<VW_LegalStatusMaster> VW_LegalStatusMaster { get; set; }
         public DbSet<VW_NatureMaster> VW_NatureMaster { get; set; }
         public DbSet<VW_OpeningBalance> VW_OpeningBalance { get; set; }
+        public DbSet<VW_ProformaInvoiceHead> VW_ProformaInvoiceHead { get; set; }
+        public DbSet<VW_Receipts> VW_Receipts { get; set; }
         public DbSet<VW_SectorMaster> VW_SectorMaster { get; set; }
     }
 }

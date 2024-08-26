@@ -16,7 +16,10 @@ namespace AuditSystem.Context
     {
         public TblWorkGroup()
         {
-            this.TblCustomers = new HashSet<TblCustomer>();
+            this.TblGenaralReceipts = new HashSet<TblGenaralReceipt>();
+            this.TblInvoiceHeads = new HashSet<TblInvoiceHead>();
+            this.TblProformaInvoiceHeads = new HashSet<TblProformaInvoiceHead>();
+            this.TblReceipts = new HashSet<TblReceipt>();
             this.TblWorkTypes = new HashSet<TblWorkType>();
         }
     
@@ -32,7 +35,10 @@ namespace AuditSystem.Context
         public string Delete_By { get; set; }
         public Nullable<System.DateTime> Delete_Date { get; set; }
     
-        public virtual ICollection<TblCustomer> TblCustomers { get; set; }
+        public virtual ICollection<TblGenaralReceipt> TblGenaralReceipts { get; set; }
+        public virtual ICollection<TblInvoiceHead> TblInvoiceHeads { get; set; }
+        public virtual ICollection<TblProformaInvoiceHead> TblProformaInvoiceHeads { get; set; }
+        public virtual ICollection<TblReceipt> TblReceipts { get; set; }
         public virtual ICollection<TblWorkType> TblWorkTypes { get; set; }
     }
 }

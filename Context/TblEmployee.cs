@@ -17,17 +17,20 @@ namespace AuditSystem.Context
         public TblEmployee()
         {
             this.TblEmployeeHourlyRates = new HashSet<TblEmployeeHourlyRate>();
-            this.TblJobs = new HashSet<TblJob>();
+            this.TblJobTransactions = new HashSet<TblJobTransaction>();
             this.TblNonEffectiveEmployees = new HashSet<TblNonEffectiveEmployee>();
         }
     
         public int Id { get; set; }
         public string Code { get; set; }
+        public string JObPrefixCode { get; set; }
         public string Name { get; set; }
         public System.DateTime BirthDay { get; set; }
+        public System.DateTime DateOfJoin { get; set; }
         public string Nic { get; set; }
         public string Email { get; set; }
-        public bool IdManager { get; set; }
+        public bool IsManager { get; set; }
+        public bool IsPartner { get; set; }
         public int Fk_TitleId { get; set; }
         public int Fk_DesginationId { get; set; }
         public int Fk_DepartmentId { get; set; }
@@ -39,13 +42,12 @@ namespace AuditSystem.Context
         public Nullable<System.DateTime> Edit_Date { get; set; }
         public string Delete_By { get; set; }
         public Nullable<System.DateTime> Delete_Date { get; set; }
-        public System.DateTime DateOfJoin { get; set; }
     
         public virtual TblDepartment TblDepartment { get; set; }
         public virtual TblDesignation TblDesignation { get; set; }
         public virtual TblTitle TblTitle { get; set; }
         public virtual ICollection<TblEmployeeHourlyRate> TblEmployeeHourlyRates { get; set; }
-        public virtual ICollection<TblJob> TblJobs { get; set; }
+        public virtual ICollection<TblJobTransaction> TblJobTransactions { get; set; }
         public virtual ICollection<TblNonEffectiveEmployee> TblNonEffectiveEmployees { get; set; }
     }
 }

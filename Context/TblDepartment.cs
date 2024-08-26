@@ -16,7 +16,11 @@ namespace AuditSystem.Context
     {
         public TblDepartment()
         {
+            this.TblDepartmentSeconds = new HashSet<TblDepartmentSecond>();
+            this.TblDepartmentThirds = new HashSet<TblDepartmentThird>();
             this.TblEmployees = new HashSet<TblEmployee>();
+            this.TblInvoiceHeads = new HashSet<TblInvoiceHead>();
+            this.TblProformaInvoiceHeads = new HashSet<TblProformaInvoiceHead>();
         }
     
         public int Id { get; set; }
@@ -31,6 +35,10 @@ namespace AuditSystem.Context
         public string Delete_By { get; set; }
         public Nullable<System.DateTime> Delete_Date { get; set; }
     
+        public virtual ICollection<TblDepartmentSecond> TblDepartmentSeconds { get; set; }
+        public virtual ICollection<TblDepartmentThird> TblDepartmentThirds { get; set; }
         public virtual ICollection<TblEmployee> TblEmployees { get; set; }
+        public virtual ICollection<TblInvoiceHead> TblInvoiceHeads { get; set; }
+        public virtual ICollection<TblProformaInvoiceHead> TblProformaInvoiceHeads { get; set; }
     }
 }

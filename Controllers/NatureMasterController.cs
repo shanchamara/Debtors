@@ -21,7 +21,11 @@ namespace AuditSystem.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            return View("Create");
+            var model = new NatureMasterModel()
+            {
+                IsActive = true,
+            };
+            return View("Create", model);
         }
 
         [HttpPost]
